@@ -1,14 +1,15 @@
 <?php
 
-require_once('models/accueilModel.php'); // Inclure le fichier contenant la définition de la classe TypeModel
+require_once('models/accueilModel.php');
+require_once('models/videoModel.php');
 class AccueilController {
 
     public function accueil() {
 
-        // Récupérer les données à partir du modèle ici
+        $videos = VideoModel::getAllVideos();
+        $villes = AccueilModel::getAllCities();
+        $animaux = VideoModel::getAnimals();
 
-
-        // Vue de la page accueil
         require_once 'views/accueil_view.php';
 
     }

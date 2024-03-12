@@ -3,6 +3,7 @@ require('controllers/accueilController.php');
 require('controllers/typeController.php');
 require('controllers/videoController.php');
 require('controllers/controleController.php');
+require('controllers/adoptionController.php');
 
 
 // ----------------ROUTER------------------------------
@@ -21,14 +22,14 @@ switch ($action) {
         $controller->types();
         break;
 
-    case'accueil':
-        $controller = new AccueilController();
-        $controller->accueil();
+    case 'video':
+        $controller = new VideoController();
+        $controller->showVideo($_GET['id']);
         break;
 
-    case'videos';
-    $controller = new VideoController();
-    $controller->videos();
+     case'create-video';
+     $controller = new VideoController();
+     $controller->createVideo();
      break;
 
      case 'controles';
@@ -36,6 +37,12 @@ switch ($action) {
      $controller->controles();
      break;
 
+    case 'adoption';
+    $controller = new AdoptionController();
+    $controller->adoption();
+    break;
+
     default:
-        require_once 'views/accueil_view.php';
+        $controller = new AccueilController();
+        $controller->accueil();
 }

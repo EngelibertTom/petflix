@@ -1,15 +1,24 @@
 <?php
 
-require_once('models/videoModel.php'); // Inclure le fichier contenant la définition de la classe TypeModel
+require_once('models/videoModel.php');
+require_once('models/membreModel.php');
 class VideoController {
 
-    public function videos() {
 
-        // Récupérer les données à partir du modèle ici
+    public function createVideo() {
 
+        $membres = MembreModel::getAllMembres();
+        $animaux = VideoModel::getAnimals();
 
-        // Vue de la page vidéo
-        require_once 'views/videos_view.php';
+        require_once 'views/createVideo_view.php';
+    }
 
+    public function showVideo($videoId) {
+
+        $video = VideoModel::getDetailsVideo($videoId);
+        $animals = VideoModel::getAnimalsOfVideo($videoId);
+        $member = VideoModel::getMemberOfVideo($videoId);
+
+        require_once 'views/video_view.php';
     }
 }
