@@ -1,7 +1,7 @@
 <h1>Adopter un animal</h1>
 <form method="post" action="../actions/adoption.php">
     <label for="animaux">Animaux disponibles à l'adoption</label>
-    <select name="animaux" id="animaux">
+    <select name="animaux[]" id="animaux" multiple="multiple">
         <?php
         foreach($animaux as $animal) {
             if(!$animal->adopte) {
@@ -9,7 +9,7 @@
             }
         }
         ?>
-    </select><br>
+    </select><br><br>
     <label for="client">Client concerné</label>
     <select name="client" id="client">
         <?php
