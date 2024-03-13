@@ -13,6 +13,9 @@
 
     <div>
         <p><?= $animal->nom ?></p>
+        <?php if($animal->adopte) { ?>
+        <p> Adopté</p>
+        <?php } ?>
     </div>
 <?php } ?>
 
