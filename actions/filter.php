@@ -27,18 +27,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $queryGetVideos->execute($params);
     $videos = $queryGetVideos->fetchAll();
 
-
+    include_once('../views/include/header.php');
     if(!empty($videos)) {
     foreach ($videos as $video) { ?>
+
     <div>
         <h2><a href="index.php?url=video&id=<?= $video->id_video ?>"><?= $video->titre ?></a></h2>
         <p><strong>Description:</strong> <?= $video->description ?></p>
-        <video width="320" height="240" controls>
-            <source src="<?= $video->url ?>" type="video/mp4">
-        </video>
+        <iframe width="560" height="315" src="<?= $video->url ?>" frameborder="0" allowfullscreen></iframe>
     </div>
+
 <?php }
     } else {
         echo 'Pas de résultat pour cette recherche.';
     }
 }
+include_once('../views/include/footer.php'); 

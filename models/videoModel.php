@@ -34,7 +34,11 @@ class VideoModel {
 
         global $db;
 
-        $sqlGetAnimals = "SELECT * FROM animal WHERE id_video = ?";
+        $sqlGetAnimals = "SELECT animal.*, types.nom as nom_type 
+                            FROM animal
+                            JOIN types ON animal.id_type = types.id
+                            WHERE id_video = ?
+";
         $queryGetAnimals = $db->prepare($sqlGetAnimals);
         $queryGetAnimals->execute([$id]);
         $result = $queryGetAnimals->fetchAll();

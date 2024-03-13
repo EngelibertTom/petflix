@@ -1,4 +1,6 @@
-<form method="post" action="../actions/addVideo.php">
+<?php include_once('include/header.php'); ?>
+<h2>Créer une video</h2>
+<form class="adoption" method="post" action="../actions/addVideo.php">
     <label for="title">Titre de la vidéo</label>
     <input type="text" name="title"> <br>
     <label for="url">URL de la vidéo</label>
@@ -24,3 +26,4 @@
     <br>
     <input type="submit" value="Créer la vidéo">
 </form>
+<?php include_once('include/footer.php'); ?>
