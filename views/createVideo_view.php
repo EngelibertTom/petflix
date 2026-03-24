@@ -1,29 +1,46 @@
 <?php include_once('include/header.php'); ?>
-<h2>Créer une video</h2>
-<form class="adoption" method="post" action="../actions/addVideo.php">
-    <label for="title">Titre de la vidéo</label>
-    <input type="text" name="title"> <br>
-    <label for="url">URL de la vidéo</label>
-    <input type="text" name="url"><br>
-    <label for="description">Description de la vidéo</label>
-    <textarea name="description"></textarea><br>
-    <label for="animaux">Animaux concernés : </label>
-    <select name="animaux[]" id="animaux" multiple="multiple">
-        <?php
-        foreach($animaux as $animal) {
-            echo '<option value="' . $animal->id_animal . '">' . $animal->nom . '</option>';
-        }
-        ?>
-    </select><br>
-    <label for="membre">Membre responsable :</label>
-    <select name="membre" id="membre">
-        <?php
-        foreach($membres as $membre) {
-            echo '<option value="' . $membre->id_membre . '">' . $membre->nom_membre . '</option>';
-        }
-        ?>
-    </select>
-    <br>
-    <input type="submit" value="Créer la vidéo">
-</form>
+
+<div class="container">
+  <h2>Créer une vidéo</h2>
+
+  <form class="video-form card" method="post" action="../actions/addVideo.php">
+    
+    <div class="form-group">
+      <label class="form-label" for="title">Titre de la vidéo</label>
+      <input class="form-input" type="text" name="title" id="title">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="url">URL de la vidéo</label>
+      <input class="form-input" type="text" name="url" id="url">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="description">Description de la vidéo</label>
+      <textarea class="form-textarea" name="description" id="description"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="animaux">Animaux concernés</label>
+      <select class="form-select" name="animaux[]" id="animaux" multiple>
+        <?php foreach($animaux as $animal): ?>
+          <option value="<?= $animal->id_animal ?>"><?= $animal->nom ?></option>
+        <?php endforeach; ?>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="membre">Membre responsable</label>
+      <select class="form-select" name="membre" id="membre">
+        <?php foreach($membres as $membre): ?>
+          <option value="<?= $membre->id_membre ?>"><?= $membre->nom_membre ?></option>
+        <?php endforeach; ?>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn--primary">Créer la vidéo</button>
+
+  </form>
+</div>
+
 <?php include_once('include/footer.php'); ?>

@@ -1,0 +1,48 @@
+/* =============================================
+   CONTROLES / CARDS
+   ============================================= */
+
+/* On réutilise les styles communs des cards pour padding, border, radius */
+.controle {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-lg);
+   padding: var(--space-md);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+/* Si tu veux hover léger */
+.controle:hover {
+  box-shadow: 0 4px 12px rgba(45, 106, 79, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Titres et texte */
+.controle h3, .controle h4 {
+  margin-bottom: var(--space-xs);
+}
+
+.controle p {
+  margin-bottom: var(--space-xs);
+  font-size: var(--font-size-sm);
+}
+
+.controle ul {
+  margin-top: var(--space-xs);
+  padding-left: var(--space-md);
+}
+
+.controle li {
+  list-style-type: disc;
+  margin-bottom: var(--space-xs);
+}
+
+/* Responsive : si on veut que les cards prennent toute la largeur sur mobile */
+@media (max-width: 768px) {
+  .controle {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

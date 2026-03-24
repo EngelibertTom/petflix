@@ -1,6 +1,6 @@
 <?php include_once('include/header.php'); ?>
  <div>
-     <h2><a href="index.php?url=video&id=<?= $video->id_video ?>"><?= $video->titre ?></a></h2>
+     <h2><a href="<?= BASE_URL ?>index.php?url=video&id=<?= $video->id_video ?>"><?= $video->titre ?></a></h2>
      <p><strong>Description:</strong> <?= $video->description ?></p>
      <iframe width="560" height="315" src="<?= $video->url ?>" frameborder="0" allowfullscreen></iframe>
 </div>

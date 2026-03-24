@@ -1,0 +1,64 @@
+/* =============================================
+   FILTER CARD
+   ============================================= */
+.filter-card {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.filter-form {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+/* =============================================
+   VIDEO GRID
+   ============================================= */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-lg);
+}
+
+/* =============================================
+   VIDEO CARD
+   ============================================= */
+.video-card {
+  overflow: hidden;
+}
+
+/* FORMAT 16:9 */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  background: #000;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* TITRE */
+.video-card h3 {
+  margin-bottom: var(--space-xs);
+}
+
+/* DESCRIPTION */
+.video-card p {
+  font-size: var(--font-size-sm);
+}
+
+.video-card {
+  transition: transform 0.2s ease;
+}
+.video-card:hover {
+  transform: translateY(-4px) scale(1.02);
+}
