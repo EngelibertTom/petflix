@@ -1,7 +1,7 @@
 <div class="container">
   <h2>Créer une vidéo</h2>
 
-  <form class="video-form card" method="post" action="../actions/addVideo.php">
+  <form class="form-card" method="post" action="../actions/addVideo.php">
     
     <div class="form-group">
       <label class="form-label" for="title">Titre de la vidéo</label>

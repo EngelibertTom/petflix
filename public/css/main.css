@@ -170,7 +170,7 @@ h4 { font-size: var(--font-size-md);  font-weight: 500; }
 .card__body { padding: var(--space-md); }
 
 /* =============================================
-   FORMULAIRES
+   FORMULAIRES (styles de base)
    ============================================= */
 .form-group  { display: flex; flex-direction: column; gap: var(--space-xs); margin-bottom: var(--space-md); }
 .form-label  { font-size: var(--font-size-sm); font-weight: 500; }
@@ -178,20 +178,41 @@ h4 { font-size: var(--font-size-md);  font-weight: 500; }
 .form-input,
 .form-select,
 .form-textarea {
-  width:         100%;
-  padding:       10px 14px;
-  border:        1px solid var(--color-border);
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  font-size:     var(--font-size-md);
-  font-family:   var(--font-base);
-  color:         var(--color-text);
-  background:    var(--color-surface);
-  transition:    border-color var(--transition), box-shadow var(--transition);
-  outline:       none;
+  font-size: var(--font-size-md);
+  font-family: var(--font-base);
+  color: var(--color-text);
+  background: var(--color-surface);
+  transition: border-color var(--transition), box-shadow var(--transition);
+  outline: none;
 }
 .form-input:focus,
 .form-select:focus,
 .form-textarea:focus {
   border-color: var(--color-primary-light);
-  box-shadow:   0 0 0 3px rgba(82, 183, 136, 0.15);
+  box-shadow: 0 0 0 3px rgba(82, 183, 136, 0.15);
+}
+textarea { min-height: 100px; resize: vertical; }
+
+/* =============================================
+   FORMULAIRE CARD (pour centrer et layout type “dashboard”)
+   ============================================= */
+.form-card {
+  max-width: 600px;
+  margin: var(--space-lg) auto;
+  padding: var(--space-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Bouton submit dans tous les formulaires type card */
+.form-card .btn {
+  margin-top: var(--space-md);
+  width: 100%;
+  justify-content: center;
 }
