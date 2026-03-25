@@ -12,6 +12,10 @@ class AdoptionController {
         $clients = ClientModel::getAllClients();
         $membres =  membreModel::getAllMembres();
 
-        require_once 'views/adoption_view.php';
+        $view = 'views/adoption_view.php';
+        $pageTitle = "Adoptions - PETFLIX";
+
+        require_once('views/layout.php');
+
     }
 }

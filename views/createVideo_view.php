@@ -1,5 +1,3 @@
-<?php include_once('include/header.php'); ?>
-
 <div class="container">
   <h2>Créer une vidéo</h2>
 
@@ -42,5 +40,3 @@
 
   </form>
 </div>
-
-<?php include_once('include/footer.php'); ?>

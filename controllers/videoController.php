@@ -10,7 +10,11 @@ class VideoController {
         $membres = MembreModel::getAllMembres();
         $animaux = VideoModel::getAnimals();
 
-        require_once 'views/createVideo_view.php';
+        $view = 'views/createVideo_view.php';
+        $pageTitle = "Créer une vidéo - PETFLIX";
+
+        require_once('views/layout.php');
+
     }
 
     public function showVideo($videoId) {
@@ -19,6 +23,10 @@ class VideoController {
         $animals = VideoModel::getAnimalsOfVideo($videoId);
         $member = VideoModel::getMemberOfVideo($videoId);
 
-        require_once 'views/video_view.php';
+        $view = 'views/video_view.php';
+        $pageTitle = "Vidéo - PETFLIX";
+
+        require_once('views/layout.php');
+
     }
 }

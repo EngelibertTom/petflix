@@ -8,7 +8,10 @@ class TypeController {
 
         $types = TypeModel::getAllType();
 
-        require_once 'views/type_view.php';
+        $view = 'views/type_view.php';
+        $pageTitle = "Types - PETFLIX";
+
+        require_once('views/layout.php');
 
     }
 }

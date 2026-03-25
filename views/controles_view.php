@@ -1,7 +1,5 @@
 <?php
 
-include_once('include/header.php');
-// Tableau pour stocker les informations de chaque contrôle
 $controles_groupes = array();
 
 foreach ($controles as $controle) {
@@ -32,5 +30,3 @@ foreach ($controles as $controle) {
         <?php endforeach; ?>
     </div>
 <?php endforeach; ?>
-
-<?php include_once('include/footer.php'); ?>

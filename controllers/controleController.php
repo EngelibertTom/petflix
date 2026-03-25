@@ -8,8 +8,10 @@ class ControleController {
 
         $controles = ControleModel::getAllControls();
 
+        $view = 'views/controles_view.php';
+        $pageTitle = "Contrôles - PETFLIX";
 
-        require_once 'views/controles_view.php';
+        require_once('views/layout.php');
 
     }
 }

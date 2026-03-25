@@ -1,4 +1,3 @@
-<?php include_once('include/header.php'); ?>
 <h2>Adopter un animal</h2>
 <form class="adoption" method="post" action="../actions/adoption.php">
     <label for="animaux">Animaux disponibles à l'adoption</label>
@@ -29,4 +28,3 @@
     </select>
     <input type="submit" value="Adopter">
 </form>
-<?php include_once('include/footer.php'); ?>

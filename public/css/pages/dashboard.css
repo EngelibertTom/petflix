@@ -1,0 +1,81 @@
+/* =============================================
+   STATS
+   ============================================= */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.stat-card {
+  text-align: center;
+}
+
+.stat-card h3 {
+  font-size: var(--font-size-2xl);
+  color: var(--color-primary);
+}
+
+/* =============================================
+   ACTIONS
+   ============================================= */
+.actions {
+  display: flex;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+/* =============================================
+   LIST (CONTROLES)
+   ============================================= */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.list-item {
+  transition: transform 0.2s ease;
+}
+
+.list-item:hover {
+  transform: translateY(-2px);
+}
+
+/* header ligne */
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-xs);
+}
+
+/* =============================================
+   GRID (VIDEOS)
+   ============================================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-md);
+}
+
+/* =============================================
+   VIDEO
+   ============================================= */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  background: #000;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: none;
+}

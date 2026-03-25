@@ -1,5 +1,5 @@
 <?php
-require('controllers/accueilController.php');
+require('controllers/dashboardController.php');
 require('controllers/typeController.php');
 require('controllers/videoController.php');
 require('controllers/controleController.php');
@@ -43,6 +43,6 @@ switch ($action) {
     break;
 
     default:
-        $controller = new AccueilController();
-        $controller->accueil();
+        $controller = new DashboardController();
+        $controller->dashboard();
 }

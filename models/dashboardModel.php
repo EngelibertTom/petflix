@@ -2,7 +2,7 @@
 require_once('config/db.php');
 
 // Récupération des données concernant les types
-class AccueilModel {
+class DashboardModel {
 
     public static function getAllCities() {
 
