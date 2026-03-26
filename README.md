@@ -28,36 +28,6 @@ Petflix est une application web permettant de gérer un refuge pour animaux, leu
  
 ---
  
- 
-### 1. Cloner le projet
- 
-```bash
-git clone https://github.com/ton-utilisateur/petflix.git
-cd petflix
-```
- 
-### 2. Configurer la base de données
- 
-- Créer une base MySQL (ex : `petflix_db`).
-- Importer le fichier SQL fourni (`database/petflix.sql`).
-- Modifier `config.php` pour indiquer les informations de connexion à la BDD.
- 
-### 3. Démarrer le serveur local
- 
-Avec PHP :
- 
-```bash
-php -S localhost:8000
-```
- 
-Ou via un serveur type XAMPP, WAMP, MAMP.
- 
-### 4. Accéder à l'application
- 
-Ouvrir `http://localhost:8000` dans votre navigateur.
- 
----
- 
 ## 🛠️ Technologies utilisées
  
 | Technologie | Rôle |
