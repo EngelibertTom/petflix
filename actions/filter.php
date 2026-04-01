@@ -27,7 +27,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $queryGetVideos->execute($params);
     $videos = $queryGetVideos->fetchAll();
 
-    include_once('../views/include/header.php');
     if(!empty($videos)) {
     foreach ($videos as $video) { ?>
 

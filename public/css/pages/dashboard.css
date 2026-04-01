@@ -10,6 +10,12 @@
 
 .stat-card {
   text-align: center;
+  pointer-events: none;
+}
+
+.stat-card:hover {
+  box-shadow: none;
+  transform: none;
 }
 
 .stat-card h3 {
@@ -37,11 +43,7 @@
 }
 
 .list-item {
-  transition: transform 0.2s ease;
-}
-
-.list-item:hover {
-  transform: translateY(-2px);
+  pointer-events: none;
 }
 
 /* header ligne */

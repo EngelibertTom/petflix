@@ -3,6 +3,12 @@
 Petflix est une application web permettant de gérer un refuge pour animaux, leurs adoptions, ainsi que des vidéos associées pour le suivi et la communication. L'interface est pensée comme un dashboard simple et ergonomique, facilitant la gestion au quotidien.
  
 ---
+
+## Screenshots
+
+![Screenshot 1](public/screenshots/petlifx1.png)
+
+![Screenshot 2](public/screenshots/petflix2.png)
  
 ## Fonctionnalités
  
@@ -38,3 +44,11 @@ Petflix est une application web permettant de gérer un refuge pour animaux, leu
 | Git | Gestion de version |
  
 > Architecture **MVC** simple pour séparer la logique, les vues et les données.
+
+---
+
+## Screenshots
+
+![Screenshot 1](public/screenshots/petlifx1.png)
+
+![Screenshot 2](public/screenshots/petflix2.png)

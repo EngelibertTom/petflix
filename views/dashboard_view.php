@@ -44,7 +44,6 @@
 
           <div class="list-header">
             <h3><?= $controle['date_controle'] ?></h3>
-            <span class="badge badge--pending">À venir</span>
           </div>
 
           <p><strong>Client :</strong> <?= $controle['nom_client'] ?></p>

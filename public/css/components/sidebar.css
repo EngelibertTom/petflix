@@ -55,6 +55,31 @@
   color: white;
 }
 
+/* sub-link (management) */
+.sidebar__link--sub {
+  padding-left: 28px;
+  font-size: var(--font-size-xs);
+}
+
+/* =============================================
+   SECTION GROUPS
+   ============================================= */
+.sidebar__divider {
+  height: 1px;
+  background: var(--color-border);
+  margin: var(--space-md) 0 var(--space-sm);
+}
+
+.sidebar__section-label {
+  display: block;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0 14px var(--space-xs);
+}
+
 /* =============================================
    MAIN CONTENT
    ============================================= */

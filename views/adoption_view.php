@@ -1,7 +1,7 @@
 <div class="container">
   <h2>Adopter un animal</h2>
 
-  <form class="adoption-form" method="post" action="../actions/adoption.php">
+  <form class="form-card" method="post" action="../actions/adoption.php">
 
     <div class="form-group">
       <label class="form-label" for="animaux">Animaux disponibles à l'adoption</label>
@@ -35,4 +35,5 @@
     <button type="submit" class="btn btn--primary">Adopter</button>
 
   </form>
+
 </div>

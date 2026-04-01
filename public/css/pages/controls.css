@@ -9,14 +9,7 @@
   border-radius: var(--radius-lg);
   margin-top: var(--space-lg);
   margin-bottom: var(--space-lg);
-   padding: var(--space-md);
-  transition: box-shadow var(--transition), transform var(--transition);
-}
-
-/* Si tu veux hover léger */
-.controle:hover {
-  box-shadow: 0 4px 12px rgba(45, 106, 79, 0.08);
-  transform: translateY(-2px);
+  padding: var(--space-md);
 }
 
 /* Titres et texte */

@@ -139,6 +139,11 @@ h4 { font-size: var(--font-size-md);  font-weight: 500; }
   border-color: var(--color-accent);
 }
 
+.btn--sm {
+  padding: 6px 12px;
+  font-size: var(--font-size-xs);
+}
+
 /* =============================================
    BADGES DE STATUT
    ============================================= */
@@ -161,11 +166,6 @@ h4 { font-size: var(--font-size-md);  font-weight: 500; }
   border:        1px solid var(--color-border);
   border-radius: var(--radius-lg);
   overflow:      hidden;
-  transition:    box-shadow var(--transition), transform var(--transition);
-}
-.card:hover {
-  box-shadow: 0 4px 20px rgba(45, 106, 79, 0.10);
-  transform:  translateY(-2px);
 }
 .card__body { padding: var(--space-md); }
 
@@ -207,7 +207,6 @@ textarea { min-height: 100px; resize: vertical; }
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 /* Bouton submit dans tous les formulaires type card */
@@ -215,4 +214,127 @@ textarea { min-height: 100px; resize: vertical; }
   margin-top: var(--space-md);
   width: 100%;
   justify-content: center;
+}
+
+/* =============================================
+   TABLES
+   ============================================= */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.table thead tr {
+  border-bottom: 2px solid var(--color-border);
+}
+
+.table th {
+  text-align: left;
+  padding: var(--space-sm) var(--space-md);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.table td {
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+.table__actions {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+.table__actions form {
+  display: contents;
+}
+
+.table__url {
+  max-width: 260px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.management-card {
+  margin-top: var(--space-md);
+}
+
+/* =============================================
+   PAGE VIDEO
+   ============================================= */
+.video-page__meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.video-page__animals {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.video-page__animal {
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.video-page__animal:last-child {
+  border-bottom: none;
+}
+
+/* =============================================
+   DETAIL ANIMAL
+   ============================================= */
+.animal-detail__back {
+  margin-bottom: var(--space-md);
+}
+
+.animal-detail__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.animal-detail__row {
+  display: flex;
+  gap: var(--space-lg);
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.animal-detail__row:last-child {
+  border-bottom: none;
+}
+
+.animal-detail__label {
+  width: 120px;
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.animal-detail__actions {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+  align-items: center;
+}
+
+.animal-detail__actions form {
+  display: inline;
 }

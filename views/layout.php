@@ -29,9 +29,6 @@ $pageTitle = $pageTitle ?? "PETFLIX Dashboard";
     <!-- MAIN CONTENT -->
     <main class="main-content">
 
-        <!-- HEADER -->
-        <?php include_once('header.php'); ?>
-
         <!-- CONTENU DE LA PAGE -->
         <?php
         if(isset($view)) {
